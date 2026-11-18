@@ -5,6 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início | Arkhivinos</title>
+    <script>
+        // Quem chega pelo link sem estar logado vai primeiro para a tela de login.
+        // Visitantes que escolheram "Continuar sem entrar" seguem direto.
+        (function () {
+            try {
+                var logado = Object.keys(localStorage).some(function (k) {
+                    return k.indexOf('sb-') === 0 && k.slice(-11) === '-auth-token';
+                });
+                var visitante = sessionStorage.getItem('visitante') === 'sim';
+                if (!logado && !visitante) {
+                    location.replace('login.html');
+                }
+            } catch (e) { }
+        })();
+    </script>
     <link rel="stylesheet" href="base.css">
 </head>
 

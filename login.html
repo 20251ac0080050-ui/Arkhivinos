@@ -35,7 +35,7 @@
             <button type="submit">Cadastrar</button>
         </form>
 
-        <a href="index.html" class="voltarSite">&larr; Voltar para o site</a>
+        <a href="index.html" class="voltarSite" onclick="try { sessionStorage.setItem('visitante', 'sim'); } catch (e) { }">Continuar sem entrar &rarr;</a>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="supabase-config.js"></script>
