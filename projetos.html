@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Anteriores | Arkhivinos</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+    <div id="conteiner">
+        <header>
+            <div id="titulo">
+                <img src="img/IFPR.png" alt="IFPR logo">
+                <h1 id="NomeProjeto" style="max-width: 90%; margin: 0; line-height: 0;"><img src="img/arkhivinos.png" alt="Arkhivinos" style="width: 30rem; max-width: 100%; height: auto;"></h1>
+            </div>
+            <div id="menu">
+                <div id="navegacao">
+                    <div class="BlocoDeSelecao">
+                        <a href="index.html" class="linkpa">Início</a>
+                    </div>
+                    <div class="BlocoDeSelecao ativo">
+                        <a href="projetos.html" class="linkpa" aria-current="page">Projetos Anteriores</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="adicione.html" class="linkpa">Adicione seu Projeto</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="comunicacao.html" class="linkpa">Comunicação</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="ifinos.html" class="linkpa">IFINOS</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="sobre_nos.html" class="linkpa">Sobre nós</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="caixa">
+            <h2 class="tituloSecao">Projetos Ganhadores de Competições</h2>
+            <div class="gradeGanhadores" id="listaGanhadores">
+                <p class="vazio">Carregando projetos...</p>
+            </div>
+        </section>
+        <div class="caixaBusca">
+            <div class="campoBusca">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+                <input type="text" id="searchInput" placeholder="Buscar por nome, autor ou palavra-chave..." aria-label="Buscar projetos">
+            </div>
+            <div class="filtro">
+                <button id="btnFiltrar" aria-haspopup="true" aria-expanded="false">&#9776; Filtrar</button>
+                <div id="menuAnos" class="menu-anos" role="menu" hidden></div>
+            </div>
+        </div>
+        <p id="mensagemErro" class="mensagem-erro"></p>
+        <section class="caixa">
+            <h2 class="tituloSecao">Todos os Projetos</h2>
+            <div class="listaLinhas" id="listaProjetos">
+                <p class="vazio">Carregando projetos...</p>
+            </div>
+            <div class="rodapeLista">
+                <p class="contador" id="contador"></p>
+                <button id="btnVerMais" type="button" hidden>Ver mais</button>
+            </div>
+        </section>
+        <footer class="rodape">
+            Arkhivinos &middot; Projeto Integrador &middot; IFPR Campus Toledo
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script3.js"></script>
+    <script src="voltar-topo.js"></script>
+        </div>
+</body>
+
+</html>

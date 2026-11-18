@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicione seu Projeto | Arkhivinos</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+    <div id="conteiner">
+        <header>
+            <div id="titulo">
+                <img src="img/IFPR.png" alt="IFPR logo">
+                <h1 id="NomeProjeto" style="max-width: 90%; margin: 0; line-height: 0;"><img src="img/arkhivinos.png" alt="Arkhivinos" style="width: 30rem; max-width: 100%; height: auto;"></h1>
+            </div>
+            <div id="menu">
+                <nav id="navegacao">
+                    <div class="BlocoDeSelecao">
+                        <a href="index.html" class="linkpa">Início</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="projetos.html" class="linkpa">Projetos Anteriores</a>
+                    </div>
+                    <div class="BlocoDeSelecao ativo">
+                        <a href="adicione.html" class="linkpa" aria-current="page">Adicione seu Projeto</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="comunicacao.html" class="linkpa">Comunicação</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="ifinos.html" class="linkpa">IFINOS</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="sobre_nos.html" class="linkpa">Sobre nós</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="caixa texto">
+            <h2 class="tituloSecao">Adicione e publique seu projeto</h2>
+            <p>Neste espaço, caso seja o responsável, você pode adicionar projetos ao site para ser visualizado por outros
+                alunos ou pessoas de outras áreas, gerando oportunidades de parceria ou algum
+                tipo de benefício para você e seu projeto.</p>
+        </section>
+        <section class="caixa cadastro">
+            <h2 class="tituloSecao">Cadastrar Projeto</h2>
+            <form id="formCadastro" class="formGrid">
+                <div class="campo inteiro">
+                    <label for="projNome">Nome do projeto</label>
+                    <input type="text" id="projNome" placeholder="Ex.: Aplicativo para a cantina do IFPR" required>
+                </div>
+                <div class="campo inteiro">
+                    <label for="projCriadores">Criadores</label>
+                    <input type="text" id="projCriadores" placeholder="Nomes separados por vírgula" required>
+                </div>
+                <div class="campo">
+                    <label for="projOrientador">Professor orientador</label>
+                    <input type="text" id="projOrientador" placeholder="Nome do orientador" required>
+                </div>
+                <div class="campo">
+                    <label for="projEmailOrientador">E-mail do orientador</label>
+                    <input type="email" id="projEmailOrientador" placeholder="orientador@ifpr.edu.br" required>
+                </div>
+                <div class="campo">
+                    <label for="projAno">Ano de finalização</label>
+                    <input type="text" id="projAno" placeholder="Ex.: 2025" inputmode="numeric" required>
+                </div>
+                <div class="campo">
+                    <label for="projArea">Área do projeto</label>
+                    <input type="text" id="projArea" placeholder="Ex.: Robótica, Educação..." required>
+                </div>
+                <div class="campo inteiro">
+                    <label for="projLink">Link do artigo <small>(opcional)</small></label>
+                    <input type="url" id="projLink" placeholder="https://drive.google.com/...">
+                </div>
+                <div class="campo inteiro">
+                    <label for="projPalavras">Palavras-chave <small>(opcional)</small></label>
+                    <input type="text" id="projPalavras" placeholder="Separadas por vírgula">
+                </div>
+                <div class="acoesForm">
+                    <button type="submit">Cadastrar projeto</button>
+                </div>
+            </form>
+        </section>
+        <footer class="rodape">
+            Arkhivinos &middot; Projeto Integrador &middot; IFPR Campus Toledo
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script2.js"></script>
+    <script src="voltar-topo.js"></script>
+</body>
+
+</html>

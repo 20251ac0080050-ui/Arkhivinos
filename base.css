@@ -1,0 +1,1240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --body-background: #F2F2F3;
+    --verde-primario: #1A5724;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    box-sizing: border-box;
+     font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+    margin: 0;
+    background-color: var(--body-background);
+}
+
+/* CONTAINER PRINCIPAL */
+#conteiner {
+    width: 80%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+}
+
+/* CABEÇALHO */
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+
+/* TÍTULO */
+#titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+#titulo img {
+    width: 20rem;
+    max-width: 40%;
+    height: auto;
+}
+
+#NomeProjeto {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* MENU */
+#menu {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-top: 2%;
+    padding: 0 2%;
+}
+
+#navegacao {
+    width: 100%;
+    max-width: 70rem;
+    min-height: 3.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: var(--verde-primario);
+    border-radius: 0.5rem;
+}
+
+.BlocoDeSelecao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+}
+
+.linkpa {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.linkpa:hover {
+    text-decoration: none;
+}
+
+
+
+/* Página atual no menu: "aba encaixada" com a cor do fundo da página */
+.BlocoDeSelecao {
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.BlocoDeSelecao:not(.ativo):hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.BlocoDeSelecao.ativo {
+    align-self: stretch;
+
+    margin-top: 0.5rem;
+    padding: 6px 16px 10px;
+
+    background-color: aliceblue;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.BlocoDeSelecao.ativo .linkpa {
+    color: var(--verde-primario);
+    font-weight: 700;
+}
+
+#conteiner {
+    padding-bottom: 3rem;
+}
+
+
+/* ================================================= */
+/* SEÇÕES (caixas brancas) */
+/* ================================================= */
+
+:root {
+    --verde-claro: #e3efe5;
+    --cinza-texto: #555b61;
+    --borda: #dfe5ea;
+    --sombra: 0 2px 10px rgba(16, 40, 24, 0.08);
+}
+
+.caixa {
+    width: 92%;
+    margin: 2.5rem auto 0;
+    padding: 2rem;
+
+    background-color: white;
+    border: 1px solid var(--borda);
+    border-radius: 0.9rem;
+    box-shadow: var(--sombra);
+}
+
+.tituloSecao {
+    margin: 0 0 1.5rem;
+
+    color: var(--verde-primario);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tituloSecao::after {
+    content: "";
+    display: block;
+
+    width: 3.5rem;
+    height: 4px;
+    margin: 0.6rem auto 0;
+
+    background-color: var(--verde-primario);
+    border-radius: 2px;
+}
+
+
+/* ================================================= */
+/* PROJETOS GANHADORES — 3 cartões lado a lado */
+/* ================================================= */
+
+.gradeGanhadores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.cartao {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    background-color: white;
+    border: 1px solid var(--borda);
+    border-radius: 0.8rem;
+    box-shadow: var(--sombra);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(16, 40, 24, 0.15);
+}
+
+.cartao-capa {
+    aspect-ratio: 4 / 3;
+    background-color: #eef3f7;
+    border-bottom: 1px solid var(--borda);
+}
+
+.cartao-capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+/* Quando não há capa do PDF, mostra o logo do IFPR centralizado */
+.cartao-capa img.sem-capa {
+    object-fit: contain;
+    object-position: center;
+    padding: 1.5rem;
+}
+
+.cartao-corpo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+
+    padding: 1.1rem 1.2rem 1.3rem;
+    text-align: left;
+}
+
+.selo {
+    align-self: flex-start;
+
+    padding: 0.2rem 0.7rem;
+
+    background-color: var(--verde-claro);
+    color: var(--verde-primario);
+    border-radius: 999px;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.cartao-titulo {
+    margin: 0;
+
+    color: #1d2125;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cartao-autores {
+    margin: 0;
+
+    color: var(--cinza-texto);
+    font-size: 0.9rem;
+    line-height: 1.4;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cartao-corpo .botaoArtigo {
+    margin-top: auto;
+}
+
+
+/* BOTÃO "VER ARTIGO" (usado nos cartões e nas linhas) */
+.botaoArtigo {
+    display: inline-block;
+    align-self: flex-start;
+
+    padding: 0.5rem 1rem;
+
+    border: 2px solid var(--verde-primario);
+    border-radius: 0.5rem;
+
+    color: var(--verde-primario);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.botaoArtigo:hover {
+    background-color: var(--verde-primario);
+    color: white;
+}
+
+
+/* ================================================= */
+/* BARRA DE BUSCA */
+/* ================================================= */
+
+.caixaBusca {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 92%;
+    margin: 2.5rem auto 0;
+    padding: 1rem;
+
+    background-color: white;
+    border: 1px solid var(--borda);
+    border-radius: 0.9rem;
+    box-shadow: var(--sombra);
+}
+
+.campoBusca {
+    position: relative;
+    flex: 1;
+}
+
+.campoBusca svg {
+    position: absolute;
+    left: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 1.1rem;
+    height: 1.1rem;
+
+    color: var(--cinza-texto);
+    pointer-events: none;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 0.8rem 1rem;
+
+    background-color: #f7f9fb;
+    color: black;
+    border: 1px solid var(--borda);
+    border-radius: 0.6rem;
+
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campoBusca input {
+    padding-left: 2.6rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    background-color: white;
+    border-color: var(--verde-primario);
+    box-shadow: 0 0 0 3px var(--verde-claro);
+}
+
+
+/* FILTRO DE ANO — menu sanduíche */
+.filtro {
+    position: relative;
+}
+
+.menu-anos {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    min-width: 100%;
+    padding: 6px;
+
+    background-color: white;
+    border: 1px solid var(--borda);
+    border-radius: 0.6rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-anos[hidden] {
+    display: none;
+}
+
+.menu-anos button {
+    width: 100%;
+    max-width: none;
+
+    background-color: white;
+    color: black;
+
+    font-size: 1rem;
+    text-align: left;
+}
+
+.menu-anos button:hover {
+    background-color: #eef3f7;
+}
+
+.menu-anos button.selecionado {
+    background-color: var(--verde-primario);
+    color: white;
+}
+
+
+/* BOTÕES (Filtrar, Ver mais) */
+button {
+    width: 12rem;
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+
+    background-color: var(--verde-primario);
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #267534;
+}
+
+
+/* MENSAGEM DE "NENHUM RESULTADO" */
+.mensagem-erro {
+    width: 92%;
+    margin: 1rem auto 0;
+    padding: 0.8rem 1rem;
+
+    background-color: #fdecec;
+    color: #b42318;
+    border: 1px solid #f5c2c0;
+    border-radius: 0.6rem;
+
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+/* ================================================= */
+/* TODOS OS PROJETOS — um projeto por linha */
+/* ================================================= */
+
+.listaLinhas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.linha-projeto {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    padding: 1rem 1.25rem;
+
+    background-color: white;
+    border: 1px solid var(--borda);
+    border-left: 5px solid var(--verde-primario);
+    border-radius: 0.7rem;
+
+    text-align: left;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.linha-projeto:hover {
+    box-shadow: 0 6px 16px rgba(16, 40, 24, 0.12);
+    transform: translateX(3px);
+}
+
+.linha-capa {
+    flex-shrink: 0;
+
+    width: 5.5rem;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+
+    background-color: #eef3f7;
+    border: 1px solid var(--borda);
+    border-radius: 0.4rem;
+}
+
+.linha-capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.linha-capa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-doc {
+    width: 55%;
+    color: var(--verde-primario);
+    opacity: 0.75;
+}
+
+.linha-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.linha-projeto .botaoArtigo {
+    align-self: center;
+}
+
+.linha-titulo {
+    margin: 0 0 0.35rem;
+
+    color: #1d2125;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.linha-detalhe {
+    margin: 0 0 0.2rem;
+
+    color: var(--cinza-texto);
+    font-size: 0.92rem;
+    line-height: 1.4;
+}
+
+.linha-detalhe strong {
+    color: #33393f;
+    font-weight: 600;
+}
+
+.etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    margin-top: 0.6rem;
+}
+
+.etiqueta {
+    padding: 0.15rem 0.6rem;
+
+    background-color: #eef3f7;
+    color: #33393f;
+    border-radius: 999px;
+
+    font-size: 0.8rem;
+}
+
+.etiqueta.ano {
+    background-color: var(--verde-claro);
+    color: var(--verde-primario);
+    font-weight: 600;
+}
+
+.vazio {
+    margin: 1rem 0;
+    color: var(--cinza-texto);
+    text-align: center;
+}
+
+
+/* RODAPÉ DA LISTA: contador + Ver mais */
+.rodapeLista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+
+    margin-top: 1.5rem;
+}
+
+.contador {
+    margin: 0;
+    color: var(--cinza-texto);
+    font-size: 0.9rem;
+}
+
+.rodapeLista button[hidden] {
+    display: none;
+}
+
+
+/* ================================================= */
+/* TABLETS */
+/* ================================================= */
+
+@media (max-width: 900px) {
+
+    #conteiner {
+        width: 95%;
+    }
+
+    #titulo {
+        flex-direction: column;
+    }
+
+    #titulo img {
+        width: 16rem;
+        max-width: 70%;
+    }
+
+    #NomeProjeto {
+        font-size: 2.5rem;
+    }
+
+    #navegacao {
+        gap: 5px;
+    }
+
+    .linkpa {
+        font-size: 1.2rem;
+    }
+
+    .gradeGanhadores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .caixa,
+    .caixaBusca {
+        width: 94%;
+    }
+}
+
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    #conteiner {
+        width: 100%;
+    }
+
+    #titulo {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    #titulo img {
+        width: 12rem;
+        max-width: 80%;
+    }
+
+    #NomeProjeto {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    #menu {
+        padding: 0 10px;
+    }
+
+    #navegacao {
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        padding: 5px 0;
+    }
+
+    .BlocoDeSelecao {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .BlocoDeSelecao.ativo {
+        width: calc(100% - 16px);
+        margin: 4px 8px;
+        padding: 10px;
+        border-radius: 0.5rem;
+    }
+
+    .linkpa {
+        font-size: 1.1rem;
+    }
+
+    .caixa {
+        width: 94%;
+        padding: 1.25rem;
+    }
+
+    .tituloSecao {
+        font-size: 1.3rem;
+    }
+
+    .gradeGanhadores {
+        grid-template-columns: 1fr;
+    }
+
+    .caixaBusca {
+        flex-direction: column;
+        align-items: stretch;
+        width: 94%;
+    }
+
+    .filtro,
+    button {
+        width: 100%;
+    }
+
+    /* Linha vira cartão empilhado no celular */
+    .linha-projeto {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 0.9rem;
+    }
+
+    .linha-capa {
+        width: 4.5rem;
+    }
+
+    .linha-projeto .botaoArtigo {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #NomeProjeto {
+        font-size: 1.7rem;
+    }
+
+    #titulo img {
+        width: 10rem;
+    }
+
+    .linkpa {
+        font-size: 1rem;
+    }
+}
+
+
+/* ################################################# */
+/* CONTEÚDO DAS OUTRAS PÁGINAS                        */
+/* ################################################# */
+
+/* Textos corridos */
+.texto p {
+    margin: 0 0 1rem;
+
+    color: #33393f;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.texto p:last-child {
+    margin-bottom: 0;
+}
+
+/* Seção com texto de um lado e imagem do outro */
+.duasColunas {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.duasColunas .tituloSecao {
+    text-align: left;
+}
+
+.duasColunas .tituloSecao::after {
+    margin-left: 0;
+}
+
+.imagemLado {
+    display: flex;
+    justify-content: center;
+}
+
+.imagemLado img {
+    width: 100%;
+    max-width: 22rem;
+    height: auto;
+}
+
+/* Botão em forma de link (ex.: "Acessar o site do IFINOS") */
+.botaoPrincipal {
+    display: inline-block;
+
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.4rem;
+
+    background-color: var(--verde-primario);
+    color: white;
+    border-radius: 0.6rem;
+
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: background-color 0.2s;
+}
+
+.botaoPrincipal:hover {
+    background-color: #267534;
+}
+
+.linkCentral {
+    text-align: center;
+}
+
+
+/* Cartões de destaque com ícone (página Comunicação) */
+.destaques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.destaque {
+    padding: 1.5rem;
+
+    background-color: #f7f9fb;
+    border: 1px solid var(--borda);
+    border-top: 4px solid var(--verde-primario);
+    border-radius: 0.8rem;
+
+    text-align: left;
+}
+
+.destaque .icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+
+    background-color: var(--verde-claro);
+    color: var(--verde-primario);
+    border-radius: 50%;
+}
+
+.destaque .icone svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.destaque h3 {
+    margin: 0 0 0.5rem;
+
+    color: #1d2125;
+    font-size: 1.1rem;
+}
+
+.destaque p {
+    margin: 0;
+
+    color: var(--cinza-texto);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* Integrantes (página Sobre nós) */
+.equipe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.membro {
+    padding: 1.75rem 1rem;
+
+    background-color: #f7f9fb;
+    border: 1px solid var(--borda);
+    border-radius: 0.8rem;
+
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.membro:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(16, 40, 24, 0.12);
+}
+
+.membro img {
+    width: 9rem;
+    height: 9rem;
+
+    object-fit: cover;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--verde-primario);
+}
+
+.membro h3 {
+    margin: 1rem 0 0;
+
+    color: #1d2125;
+    font-size: 1.15rem;
+}
+
+
+/* ================================================= */
+/* FORMULÁRIO (Adicione seu Projeto) */
+/* ================================================= */
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.25rem;
+
+    text-align: left;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.campo.inteiro {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    color: #33393f;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.campo label small {
+    color: var(--cinza-texto);
+    font-weight: 400;
+}
+
+.acoesForm {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+
+    margin-top: 0.5rem;
+}
+
+.botaoSecundario {
+    background-color: white;
+    color: var(--verde-primario);
+    border: 2px solid var(--verde-primario);
+}
+
+.botaoSecundario:hover {
+    background-color: var(--verde-claro);
+}
+
+/* Aviso para quem não é administrador */
+.aviso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1.5rem;
+
+    background-color: #fff8e6;
+    border: 1px solid #f3d98b;
+    border-radius: 0.8rem;
+
+    color: #6b4e00;
+    text-align: center;
+}
+
+.aviso p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+/* ================================================= */
+/* RODAPÉ */
+/* ================================================= */
+
+.rodape {
+    width: 92%;
+    margin: 3rem auto 0;
+    padding-top: 1.25rem;
+
+    border-top: 1px solid var(--borda);
+
+    color: var(--cinza-texto);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+
+/* ================================================= */
+/* PÁGINA DE LOGIN */
+/* ================================================= */
+
+body.paginaLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    padding: 1.5rem;
+
+    background: linear-gradient(160deg, aliceblue 0%, #e3efe5 100%);
+}
+
+.cartaoLogin {
+    width: 100%;
+    max-width: 28rem;
+    padding: 2rem;
+
+    background-color: white;
+    border: 1px solid var(--borda);
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(16, 40, 24, 0.12);
+}
+
+.cartaoLogin header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+
+    background: none;
+}
+
+.cartaoLogin header .logoIF {
+    width: 11rem;
+    height: auto;
+}
+
+.cartaoLogin header .logoArk {
+    width: 100%;
+    max-width: 18rem;
+    height: auto;
+}
+
+.cartaoLogin h1 {
+    margin: 0;
+    line-height: 0;
+}
+
+.botoes {
+    display: flex;
+    gap: 0.25rem;
+
+    margin-bottom: 1.5rem;
+    padding: 0.25rem;
+
+    background-color: #eef3f7;
+    border-radius: 0.7rem;
+}
+
+.botoes button {
+    flex: 1;
+    width: auto;
+
+    background: transparent;
+    color: #33393f;
+}
+
+.botoes button:hover {
+    background-color: #e1e8ee;
+}
+
+.botoes button.ativo {
+    background-color: var(--verde-primario);
+    color: white;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.formulario.escondido {
+    display: none;
+}
+
+.formulario h2 {
+    margin: 0 0 0.25rem;
+
+    color: var(--verde-primario);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.formulario button {
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+.voltarSite {
+    display: block;
+    margin-top: 1.25rem;
+
+    color: var(--cinza-texto);
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.voltarSite:hover {
+    color: var(--verde-primario);
+}
+
+
+/* ================================================= */
+/* RESPONSIVO DAS OUTRAS PÁGINAS */
+/* ================================================= */
+
+@media (max-width: 900px) {
+
+    .duasColunas {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .duasColunas .tituloSecao {
+        text-align: center;
+    }
+
+    .duasColunas .tituloSecao::after {
+        margin-left: auto;
+    }
+
+    .imagemLado img {
+        max-width: 16rem;
+    }
+
+    .destaques,
+    .equipe {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .destaques,
+    .equipe,
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .texto p {
+        font-size: 1rem;
+    }
+
+    .acoesForm {
+        flex-direction: column-reverse;
+    }
+
+    .acoesForm button {
+        width: 100%;
+    }
+
+    .cartaoLogin {
+        padding: 1.5rem;
+    }
+}
+
+
+/* ================================================= */
+/* BOTÃO VOLTAR AO TOPO */
+/* ================================================= */
+
+.voltarTopo {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 50;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0;
+
+    background-color: var(--verde-primario);
+    color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 6px 16px rgba(16, 40, 24, 0.3);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.25s, transform 0.25s, visibility 0.25s, background-color 0.2s;
+}
+
+.voltarTopo.visivel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.voltarTopo:hover {
+    background-color: #267534;
+    transform: translateY(-3px);
+}
+
+.voltarTopo svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+@media (max-width: 600px) {
+    .voltarTopo {
+        right: 1rem;
+        bottom: 1rem;
+        width: 2.9rem;
+    }
+}

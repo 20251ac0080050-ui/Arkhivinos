@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início | Arkhivinos</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+    <div id="conteiner">
+        <header>
+            <div id="titulo">
+                <img src="img/IFPR.png" alt="IFPR logo">
+                <h1 id="NomeProjeto" style="max-width: 90%; margin: 0; line-height: 0;"><img src="img/arkhivinos.png" alt="Arkhivinos" style="width: 30rem; max-width: 100%; height: auto;"></h1>
+            </div>
+            <div id="menu">
+                <nav id="navegacao">
+                    <div class="BlocoDeSelecao ativo">
+                        <a href="index.html" class="linkpa" aria-current="page">Início</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="projetos.html" class="linkpa">Projetos Anteriores</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="adicione.html" class="linkpa">Adicione seu Projeto</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="comunicacao.html" class="linkpa">Comunicação</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="ifinos.html" class="linkpa">IFINOS</a>
+                    </div>
+                    <div class="BlocoDeSelecao">
+                        <a href="sobre_nos.html" class="linkpa">Sobre nós</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="caixa duasColunas">
+            <div class="texto">
+                <h2 class="tituloSecao">O que é o componente de Projeto Integrador?</h2>
+                <p>No componente de Projeto Integrador I, os alunos aprenderão a criar um site com o grande objetivo de
+                    usar a tecnologia para resolver um problema real do dia a dia. Para tirar essa ideia do papel, eles
+                    vão dominar duas ferramentas fundamentais da internet ao longo do ano: o HTML, que constrói a
+                    estrutura da página, e o CSS, que cuida de todo o design e do visual. Mais do que apenas programar,
+                    essa atividade desafia os estudantes a organizarem suas próprias etapas de trabalho, aprendendo
+                    a planejar um projeto do início ao fim e a colaborar uns com os outros.</p>
+                <p>Para estimular o espírito de pesquisa e expandir o conhecimento geral, os estudantes poderão
+                    escolher grandes temas de relevância social para serem o assunto principal do site. Isso faz com que
+                    a tecnologia ganhe um propósito maior, conectando o aprendizado técnico com a conscientização e a
+                    cidadania.</p>
+            </div>
+            <div class="imagemLado">
+                <img src="img/selo-projeto-integrador.png" alt="Logo do Projeto Integrador">
+            </div>
+        </section>
+        <section class="caixa">
+            <h2 class="tituloSecao">Exemplo de Projeto</h2>
+            <div class="listaLinhas" id="exemploProjeto">
+                <p class="vazio">Carregando projeto...</p>
+            </div>
+            <div class="linkCentral">
+                <a href="projetos.html" class="botaoPrincipal">Ver todos os projetos &rarr;</a>
+            </div>
+        </section>
+        <footer class="rodape">
+            Arkhivinos &middot; Projeto Integrador &middot; IFPR Campus Toledo
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script-inicio.js"></script>
+    <script src="voltar-topo.js"></script>
+</body>
+
+</html>
